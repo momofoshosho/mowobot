@@ -1,7 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const config = require("./config.json");
-const fs = require("fs");
 const sql = require("sqlite");
 sql.open("./score.sqlite");
 
@@ -10,7 +8,7 @@ client.on("ready", () => {
     client.user.setStatus("online");
     client.user.setActivity('video games with Mowogen!');
 });
-
+prefix = "!";
 client.on("message", (message) => {
     if (message.channel.type == "dm") return;
     
@@ -46,25 +44,22 @@ client.on("message", (message) => {
         });
     });
     
-  if (message.content.startsWith(config.prefix + "ping")) {
+  if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
   } else
 
-  if (message.content.startsWith(config.prefix + "owo")) {
+  if (message.content.startsWith(prefix + "owo")) {
     message.channel.send("OwO What's This?");
   } else
-      if (message.content.startsWith(config.prefix + "help")) {
+      if (message.content.startsWith(prefix + "help")) {
           message.channel.send({embed: {
               author: {
                   name: client.user.username,
                   icon_url: client.user.avatarURL
               },
               title: "Look at what I can do!",
-              description: "my default prefix is !",
-              fields: [{
-                  name: "prefix",
-                  value: "Get my attention with something else :3"
-                },
+              description: "my prefix is !",
+              fields: [
                   {
                   name: "ping",
                   value: "Check out my response time >.<"
@@ -94,25 +89,17 @@ client.on("message", (message) => {
           }
        });
       }
-    else
-      if (message.content.startsWith(config.prefix + "prefix")) {
-          let newPrefix = message.content.split(" ").slice(1,2)[0];
-          config.prefix = newPrefix;
-          
-          fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
-      }
     
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
     
-    if (!message.content.startsWith(config.prefix) || message.author.bot) return;
-    
-    if (message.content.startsWith(config.prefix + "level")) {
+    if (message.content.startsWith(prefix + "level")) {
         sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
             if (!row) return message.reply("Oh no! Your current level is 0!");
             message.reply(`Ta da! Your current level is ${row.level}`);
             
         });
     } else
-        if (message.content.startsWith(config.prefix + "points")) {
+        if (message.content.startsWith(prefix + "points")) {
             sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
                 if (!row) return message.reply("uwu it looks like you don't have any points :(");
                 message.reply(`owo it looks like you have ${row.points} points, fight-o!`);
