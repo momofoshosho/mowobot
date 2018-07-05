@@ -6,7 +6,7 @@ sql.open("./score.sqlite");
 client.on("ready", () => {
   console.log("I am ready!");
     client.user.setStatus("online");
-    client.user.setActivity('video games with Mowogen!');
+    client.user.setActivity('my guitar! chakakaka');
 });
 prefix = "!";
 client.on("message", (message) => {
