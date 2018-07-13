@@ -57,6 +57,10 @@ client.on("message", (message) => {
    if (message.content.startsWith("lesbians")) {
      message.channel.send("owo are we talking about lesbians? Mowogen and Ken *love* talking about lesbians!");
    } else 
+    
+    if (message.content.startsWith("ant is a hoe")) {
+      message.channel.send("you're damn right! >.<");
+    } else
 
   if (message.content.startsWith(prefix + "owo")) {
     message.channel.send("OwO What's This?");
