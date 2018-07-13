@@ -8,6 +8,12 @@ client.on("ready", () => {
     client.user.setStatus("online");
     client.user.setActivity('my guitar! chakakaka');
 });
+
+client.on("guildMemberAdd", (member) => {
+  console.log(`New User "${member.user.username}" has joined "${member.guild.name}"`);
+  member.guild.channels.get("welcome").send(`"${member.user.username}" has joined this server`);
+});
+
 prefix = "!";
 client.on("message", (message) => {
     if (message.channel.type == "dm") return;
@@ -47,6 +53,10 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
   } else
+    
+   if (message.content.startsWith("lesbians")) {
+     message.channel.send("owo are we talking about lesbians? Mowogen and Ken *love* talking about lesbians!");
+   } else 
 
   if (message.content.startsWith(prefix + "owo")) {
     message.channel.send("OwO What's This?");
