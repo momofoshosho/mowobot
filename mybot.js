@@ -10,8 +10,9 @@ client.on("ready", () => {
 });
 
 client.on("guildMemberAdd", (member) => {
-  console.log(`New User "${member.user.username}" has joined "${member.guild.name}"`);
- member.guild.channels.get("welcome").send(`"${member.user.username}" has joined this server`);
+  const channel = member.guild.channels.find('name', 'member-log');
+  if (!channel) return;
+  channel.send(`Welcome to the server, ${member}`);
 });
 
 prefix = "!";
