@@ -22,8 +22,6 @@ client.on("message", (message) => {
         const dispatcher = connection.playFile("./sounds/welcome_to_chilis.mp3");
         })
         .catch(console.log);
-      client.leaveVoiceChannel(message.author.voiceChannel);
-      
     } else {
       
       message.reply('You need to join a voice channel first!');
