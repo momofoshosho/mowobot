@@ -18,18 +18,16 @@ client.on("message", (message) => {
     if (message.content === (prefix + "chili")) {
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
-        .then(connection => { 
-          const dispatcher = connection.playFile("./sounds/welcome_to_chilis.mp3");
-          dispatcher.on('end', () => {
-        });
-        dispatcher.end();
+        .then(connection => {
         })
         .catch(console.log);
+      const dispatcher = connection.playFile("./sounds/welcome_to_chilis.mp3");
+      message.member.voiceChannel.leave().then(connection => {}).catch(console.log);
     } else {
       message.reply('You need to join a voice channel first!');
     }
   }
-    
+ 
     sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
         if (!row) {
             sql.run("INSERT INTO scores (userId, points, level) VALUES (?,?,?)", [message.author.id, 1, 0]);
