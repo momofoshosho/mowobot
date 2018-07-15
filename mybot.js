@@ -20,7 +20,7 @@ client.on("message", (message) => {
       message.member.voiceChannel.join()
         .then(connection => { 
           const dispatcher = connection.playFile("./sounds/welcome_to_chilis.mp3");
-          client.leaveVoiceChannel(message.member.voiceState.channelID);
+          client.leaveVoiceChannel(message.member.voiceState);
         })
         .catch(console.log);
     } else {
