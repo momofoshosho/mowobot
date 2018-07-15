@@ -23,7 +23,7 @@ client.on("message", (message) => {
         })
         .catch(console.log);
       
-      message.member.voiceChannel.leave().then(connection => {}).catch(console.log);
+      message.member.voiceChannel.leave();
     } else {
       message.reply('You need to join a voice channel first!');
     }
