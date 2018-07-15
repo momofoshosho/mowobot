@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+var opusscript = require("opusscript");
 const sql = require("sqlite");
 sql.open("./score.sqlite");
 
