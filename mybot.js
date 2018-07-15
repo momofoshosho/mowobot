@@ -20,7 +20,7 @@ client.on("message", (message) => {
       message.member.voiceChannel.join()
         .then(connection => { 
           const dispatcher = connection.playFile("./sounds/welcome_to_chilis.mp3");
-        })
+        }).disconnect
         .catch(console.log);
     } else {
       message.reply('You need to join a voice channel first!');
