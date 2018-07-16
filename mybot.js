@@ -25,7 +25,7 @@ client.on("message", (message) => {
         const dispatcher = connection.playStream(stream, streamOptions);
         })
         .catch(console.log);
-      message.member.voiceChannel.end();
+      message.member.voiceChannel.disconnect();
     } else {
       
       message.reply('You need to join a voice channel first!');
