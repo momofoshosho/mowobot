@@ -4,7 +4,7 @@ var opusscript = require("opusscript");
 const ytdl = require('ytdl-core');
 const streamOptions = { seek: 0, volume: 1 };
 const sql = require("sqlite");
-sql.open("./score.sqlite");
+sql.open("/score.sqlite");
 
 client.on("ready", () => {
   console.log("I am ready!");
