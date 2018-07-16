@@ -31,6 +31,19 @@ client.on("message", (message) => {
       message.reply('You need to join a voice channel first!');
     }
   }
+  if (message.content === (prefix + "disconnect")) {
+    if (message.member.voiceChannel) {
+      message.member.voiceChannel.disconnect()
+        .then(connection => {
+        message.reply("fine I'll go..");
+        })
+        .catch(console.log);
+      message.member.voiceChannel.disconnect();
+    } else {
+      
+      message.reply('You need to join a voice channel first!');
+    }
+  }
  
     sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
         if (!row) {
