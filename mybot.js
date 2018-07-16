@@ -19,7 +19,7 @@ client.on("message", (message) => {
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
         .then(connection => {
-        const dispatcher = connection.playFile("./sounds/welcome_to_chilis.mp3");
+        const dispatcher = connection.playArbitraryInput('https://www.youtube.com/watch?v=5yxzeeacVuE');
         })
         .catch(console.log);
     } else {
