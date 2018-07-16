@@ -32,8 +32,7 @@ client.on("message", (message) => {
   }
   if (message.content === (prefix + "disconnect")) {
     if (message.member.voiceChannel) {
-      message.member.voiceChannel.leave()
-        .catch(console.log);
+      message.member.voiceChannel.leave();
       message.reply("Fine I'll go..");
     } else {
       
