@@ -24,8 +24,8 @@ client.on("message", (message) => {
         const stream = ytdl('https://www.youtube.com/watch?v=5yxzeeacVuE', { filter : 'audioonly' });
         const dispatcher = connection.playStream(stream, streamOptions);
         })
-        message.member.voiceChannel.end();
         .catch(console.log);
+      message.member.voiceChannel.end();
     } else {
       
       message.reply('You need to join a voice channel first!');
