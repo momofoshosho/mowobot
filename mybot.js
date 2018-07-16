@@ -17,9 +17,12 @@ client.on("message", (message) => {
     
     if (message.content === (prefix + "chili")) {
     if (message.member.voiceChannel) {
+      const ytdl = require('ytdl-core');
+      const streamOptions = { seek: 0, volume: 1 };
       message.member.voiceChannel.join()
         .then(connection => {
-        const dispatcher = connection.playArbitraryInput('https://www.youtube.com/watch?v=5yxzeeacVuE');
+        const stream = ytdl('https://www.youtube.com/watch?v=5yxzeeacVuE', { filter : 'audioonly' });
+        const dispatcher = connection.playStream(stream, streamOptions);
         })
         .catch(console.log);
     } else {
