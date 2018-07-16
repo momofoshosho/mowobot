@@ -4,7 +4,7 @@ var opusscript = require("opusscript");
 const ytdl = require('ytdl-core');
 const streamOptions = { seek: 0, volume: 1 };
 const sql = require("sqlite");
-sql.open("/score.sqlite");
+sql.open("./score.sqlite");
 
 client.on("ready", () => {
   console.log("I am ready!");
@@ -62,8 +62,9 @@ client.on("message", (message) => {
                 message.reply("Congrats! You've earned the role Superstar OwO. Please let either the owner or moderators know of your achievement OwO");
             } else if ( row.points == 90000 && row.level == 30) {
                 message.reply("Congrats! You've earned the highest spot in our ranks, OwO Boss!!! Please let either the owner or moderators know of your achievement OwO");
-            }
+            } else {
             sql.run(`UPDATE scores SET points = ${row.points} WHERE userId = ${message.author.id}`);
+            }
         }
     }).catch(() => {
         console.error;
