@@ -33,11 +33,8 @@ client.on("message", (message) => {
   if (message.content === (prefix + "disconnect")) {
     if (message.member.voiceChannel) {
       message.member.voiceChannel.leave()
-        .then(connection => {
-        message.reply("fine I'll go..");
-        })
         .catch(console.log);
-      message.member.voiceChannel.disconnect();
+      message.reply("Fine I'll go..");
     } else {
       
       message.reply('You need to join a voice channel first!');
