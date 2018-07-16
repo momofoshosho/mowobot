@@ -32,7 +32,7 @@ client.on("message", (message) => {
   }
   if (message.content === (prefix + "disconnect")) {
     if (message.member.voiceChannel) {
-      message.member.voiceChannel.disconnect()
+      message.member.voiceChannel.leave()
         .then(connection => {
         message.reply("fine I'll go..");
         })
