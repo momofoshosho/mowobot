@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 var opusscript = require("opusscript");
+const ytdl = require('ytdl-core');
+const streamOptions = { seek: 0, volume: 1 };
 const sql = require("sqlite");
 sql.open("./score.sqlite");
 
@@ -17,8 +19,6 @@ client.on("message", (message) => {
     
     if (message.content === (prefix + "chili")) {
     if (message.member.voiceChannel) {
-      const ytdl = require('ytdl-core');
-      const streamOptions = { seek: 0, volume: 1 };
       message.member.voiceChannel.join()
         .then(connection => {
         const stream = ytdl('https://www.youtube.com/watch?v=5yxzeeacVuE', { filter : 'audioonly' });
