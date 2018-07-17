@@ -51,7 +51,8 @@ client.on("message", (message) => {
                 row.level = curLevel
                 sql.run(`UPDATE scores SET points = ${row.points + 1}, level = ${row.level} WHERE userId = ${message.author.id}`);
                 message.reply(`owo it looks like you've reached level **${curLevel}**! You derserve a pat`);
-            } else if (row.points == 2500 && row.level == 5) {
+            } 
+            if (row.points == 2500 && row.level == 5) {
                 message.reply("Congrats! You've earned the role OwO Member. Please let either the owner or moderators know of your achievement OwO");
             } else if ( row.points == 1000 && row.level == 10) {
                 message.reply("Congrats! You've earned the role Popular in OwO. Please let either the owner or moderators know of your achievement OwO");
@@ -63,8 +64,8 @@ client.on("message", (message) => {
                 message.reply("Congrats! You've earned the role Superstar OwO. Please let either the owner or moderators know of your achievement OwO");
             } else if ( row.points == 90000 && row.level == 30) {
                 message.reply("Congrats! You've earned the highest spot in our ranks, OwO Boss!!! Please let either the owner or moderators know of your achievement OwO");
-            } else {
-            sql.run(`UPDATE scores SET points = ${row.points} WHERE userId = ${message.author.id}`);
+            } 
+           sql.run(`UPDATE scores SET points = ${row.points} WHERE userId = ${message.author.id}`);
             }
         }
     }).catch(() => {
