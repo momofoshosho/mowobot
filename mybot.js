@@ -16,6 +16,7 @@ prefix = "!";
 client.on("message", (message) => {
     if (message.channel.type == "dm") return;
     if (!message.guild) return;
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
     
     if (message.content === (prefix + "chili")) {
     if (message.member.voiceChannel) {
@@ -127,7 +128,7 @@ client.on("message", (message) => {
        });
       }
     
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
+    
     
     if (message.content.startsWith(prefix + "level")) {
         sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
