@@ -66,7 +66,6 @@ client.on("message", (message) => {
                 message.reply("Congrats! You've earned the highest spot in our ranks, OwO Boss!!! Please let either the owner or moderators know of your achievement OwO");
             } 
            sql.run(`UPDATE scores SET points = ${row.points} WHERE userId = ${message.author.id}`);
-            }
         }
     }).catch(() => {
         console.error;
