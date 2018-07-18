@@ -10,14 +10,12 @@ client.on("ready", () => {
 prefix = "!";
 client.on("message", (message) => {
     if (message.channel.type == "dm") return;
-    if (!message.guild) return;
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     
   if (message.content.startsWith(prefix + "boop")) {
     message.channel.send("boop boop!");
-  } else
-    
-   if (message.content.startsWith("lesbians")) {
+      
+  } if (message.content.startsWith("lesbians")) {
      message.channel.send("owo are we talking about lesbians? Mowogen and Ken *love* talking about lesbians!");
    } else 
     
@@ -35,10 +33,13 @@ client.on("message", (message) => {
                   icon_url: client.user.avatarURL
               },
               title: "Look at what I can do!",
-              description: "my prefix is !",
-              fields: [
+              description: "my default prefix is !",
+              fields: [{
+                  name: "prefix",
+                  value: "Get my attention with something else :3"
+                },
                   {
-                  name: "boop",
+                  name: "ping",
                   value: "Check out my response time >.<"
                 },
                   {
@@ -53,9 +54,10 @@ client.on("message", (message) => {
               timestamp: new Date(),
               footer: {
                   icon_url: client.user.avatarURL,
-                  text: "© Yui Senpai"
+                  text: "© Mowobot"
               }
           }
+       });
+      }
 });
-
 client.login(process.env.BOT_TOKEN);
