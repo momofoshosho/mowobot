@@ -13,27 +13,26 @@ client.on("ready", () => {
 prefix = "!";
 client.on("message", (message) => {
     if (message.channel.type == "dm") return;
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
     
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
   } else
-    if (message.content.startsWith(prefix + "boop")) {
-      const boopimgs = [
-        './images/boop1.gif',
-        './images/boop2.gif',
-        './images/boop3.gif',
-        './images/boop4.gif',
-        './images/boop5.gif',
-        './images/boop6.gif',
-        './images/boop7.gif',
-        './images/boop8.gif'
-      ]
-      var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
-      var randboop = boopimgs[rand]
-      const attachment = new Discord.Attachment({randboop}, "Boop!");
-      message.channel.send({attachment});
-  } else
+    //if (message.content.startsWith(prefix + "boop")) {
+     // const boopimgs = [
+     //  './images/boop1.gif',
+     //   './images/boop2.gif',
+     //   './images/boop3.gif',
+     //   './images/boop4.gif',
+     //   './images/boop5.gif',
+     //   './images/boop6.gif',
+     //   './images/boop7.gif',
+     //   './images/boop8.gif'
+     // ]
+      //var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
+      //var randboop = boopimgs[rand]
+      //const attachment = new Discord.Attachment({randboop}, "Boop!");
+      //message.channel.send({attachment});
+  //} else
     
   if (message.content.startsWith("lesbians")) {
      message.channel.send("owo are we talking about lesbians? Mowogen and Ken *love* talking about lesbians!");
@@ -84,5 +83,6 @@ client.on("message", (message) => {
         }
      });
     }
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
 });
 client.login(process.env.BOT_TOKEN);
