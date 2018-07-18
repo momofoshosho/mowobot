@@ -19,18 +19,17 @@ client.on("message", (message) => {
   } else
     if (message.content.startsWith(prefix + "boop")) {
       const boopimgs = [
-        'https://imgur.com/gallery/UaNm6fv',
-        'https://imgur.com/gallery/AfT5VRL',
-        'https://imgur.com/gallery/3fntFrK',
-        'https://gph.is/19Ex5Vn',
-        'https://gph.is/1mZ8NOI',
-        'https://gph.is/1bdORiD',
-        'https://gph.is/2fBCZPZ',
-        'https://gph.is/2fBCZPZ',
-        'https://imgur.com/gallery/nDrxL85'
+        'https://i.imgur.com/UaNm6fv.gif',
+        'https://i.imgur.com/AfT5VRL.gif',
+        'https://i.imgur.com/3fntFrK.gif',
+        'https://media.giphy.com/media/wCyhohC0Hc2Qg/giphy.gif',
+        'https://media.giphy.com/media/uJsuIv6xh81X2/giphy.gif',
+        'https://media.giphy.com/media/lcvjDNIJ8CS88/giphy.gif',
+        'https://media.giphy.com/media/3oz8xCxj4400yvfgDm/giphy.gif',
+        'https://media0.giphy.com/media/3o7bujU8tvczLqPtni/giphy.gif'
       ]
       var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
-      const embed = new Discord.RichEmbed().addField("Boop!").setURL('https://imgur.com/gallery/UaNm6fv');
+      const embed = new Discord.RichEmbed().addField("Boop!").setImage(boopimgs[rand]);
       message.channel.send({ embed });
   } else
     
