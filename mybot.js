@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
 
+
 client.on("ready", () => {
   console.log("I am ready!");
     client.user.setStatus("online");
@@ -28,7 +29,8 @@ client.on("message", (message) => {
         'https://gph.is/2fBCZPZ',
         'https://imgur.com/gallery/nDrxL85'
       ]
-    message.channel.send("***Boop!***", {file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]});
+      const embed = new Discord.RichEmbed().addField("***Boop!***").setImage(rando_imgs);
+      message.channel.send({embed});
   } else
     
   if (message.content.startsWith("lesbians")) {
