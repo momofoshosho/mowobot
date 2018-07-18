@@ -18,7 +18,7 @@ client.on("message", (message) => {
     message.channel.send("pong!");
   } else
     if (message.content.startsWith(prefix + "boop")) {
-      var boopimgs = [
+      const boopimgs = [
         'https://imgur.com/gallery/UaNm6fv',
         'https://imgur.com/gallery/AfT5VRL',
         'https://imgur.com/gallery/3fntFrK',
@@ -31,7 +31,7 @@ client.on("message", (message) => {
       ]
       var rand = Math.floor(Math.random() * boopimgs.length);
       var randomboop = boopimgs[rand];
-      const embed = new Discord.RichEmbed().addField("Boop!").attachFile(randomboop)
+      const embed = new Discord.RichEmbed().addField("Boop!").attachImage(randomboop)
 message.channel.send({ embed });
   } else
     
