@@ -13,8 +13,8 @@ client.on("message", (message) => {
     if (!message.guild) return;
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     
-  if (message.content.startsWith(prefix + "ping")) {
-    message.channel.send("pong!");
+  if (message.content.startsWith(prefix + "boop")) {
+    message.channel.send("boop boop!");
   } else
     
    if (message.content.startsWith("lesbians")) {
