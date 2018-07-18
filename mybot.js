@@ -56,8 +56,6 @@ client.on("message", (message) => {
                   text: "© Yui Senpai"
               }
           }
-       });
-      }
 });
 
 client.login(process.env.BOT_TOKEN);
