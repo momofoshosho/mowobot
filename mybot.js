@@ -31,7 +31,7 @@ client.on("message", (message) => {
       ]
       var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
       var randboop = boopimgs[rand]
-      const attachment = new Discord.Attachment(randboop, "Boop!");
+      const attachment = new Discord.Attachment({randboop}, "Boop!");
       message.channel.send({attachment});
   } else
     
