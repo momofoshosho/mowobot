@@ -31,7 +31,7 @@ client.on("message", (message) => {
       ]
       var rand = Math.floor(Math.random() * boopimgs.length);
       var randomboop = boopimgs[rand];
-      const embed = const embed = {
+      const embed = {
   "image": {
     "url": "{randomboop}"
   },
