@@ -29,7 +29,7 @@ client.on("message", (message) => {
         'https://gph.is/2fBCZPZ',
         'https://imgur.com/gallery/nDrxL85'
       ]
-      const embed = new Discord.RichEmbed().addField("***Boop!***").setImage(rando_imgs);
+      const embed = new Discord.RichEmbed().addField("***Boop!***").setImage(rando_imgs[Math.floor(Math.random() * rando_imgs.length)]);
       message.channel.send({embed});
   } else
     
