@@ -31,7 +31,8 @@ client.on("message", (message) => {
       ]
       var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
       var randboop = boopimgs[rand]
-      message.channel.send("Boop!", {url: [randboop]});
+      const attachment = new Discord.Attachment(randboop, "Boop!");
+      message.channel.send({attachment});
   } else
     
   if (message.content.startsWith("lesbians")) {
