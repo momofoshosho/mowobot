@@ -31,8 +31,7 @@ client.on("message", (message) => {
       ]
       var rand = Math.floor(Math.random() * boopimgs.length);
       var randomboop = boopimgs[rand];
-      const embed = new Discord.RichEmbed().addField("Boop!").attachFile(randomboop);
-};
+      const embed = new Discord.RichEmbed().addField("Boop!").attachFile(randomboop)
 message.channel.send({ embed });
   } else
     
