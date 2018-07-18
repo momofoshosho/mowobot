@@ -31,7 +31,7 @@ client.on("message", (message) => {
       ]
       var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
       var randboop = boopimgs[rand]
-      message.channel.send("Boop!", randboop);
+      message.channel.send("Boop!", {file: [randboop]});
   } else
     
   if (message.content.startsWith("lesbians")) {
