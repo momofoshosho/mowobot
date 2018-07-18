@@ -30,7 +30,7 @@ client.on("message", (message) => {
         'https://imgur.com/gallery/nDrxL85'
       ]
       var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
-      const embed = new Discord.RichEmbed().addField("Boop!").attatchFile('<img src="'+boopimgs[rand]+'" />');
+      const embed = new Discord.RichEmbed().addField("Boop!").attachFile('<img src="'+boopimgs[rand]+'" />');
       message.channel.send({ embed });
   } else
     
