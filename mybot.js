@@ -30,8 +30,7 @@ client.on("message", (message) => {
       ]
       var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
       var randboop = boopimgs[rand]
-      const embed = new Discord.RichEmbed().addField("Boop!").setImage(randboop);
-      message.channel.send({ embed });
+      message.channel.send("Boop!", file: {randboop});
   } else
     
   if (message.content.startsWith("lesbians")) {
