@@ -30,9 +30,8 @@ client.on("message", (message) => {
         'https://imgur.com/gallery/nDrxL85'
       ]
       var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
-      var randomboop = rand;
-      const embed = new Discord.RichEmbed().addField("Boop!").setURL(randomboop)
-message.channel.send({ embed });
+      const embed = new Discord.RichEmbed().addField("Boop!").setURL('<img src="'+boopimgs[rand]+'" />');
+      message.channel.send({ embed });
   } else
     
   if (message.content.startsWith("lesbians")) {
