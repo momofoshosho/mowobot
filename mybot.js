@@ -29,7 +29,8 @@ client.on("message", (message) => {
         'https://media0.giphy.com/media/3o7bujU8tvczLqPtni/giphy.gif'
       ]
       var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
-      const embed = new Discord.RichEmbed().addField("Boop!").setImage(boopimgs[rand]);
+      var randboop = boopimgs[rand]
+      const embed = new Discord.RichEmbed().addField("Boop!").setImage(randboop);
       message.channel.send({ embed });
   } else
     
