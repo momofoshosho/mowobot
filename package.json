@@ -1,5 +1,5 @@
 {
-  "name": "mowobot",
+  "name": "yui-senpai",
   "version": "1.0.0",
   "description": "",
   "main": "mybot.js",
@@ -12,10 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.2",
-    "sqlite": "^2.9.2",
-    "request": "^2.81.0",
-    "ffmpeg-binaries": "^4.0.0",
-    "opusscript": "^0.0.6",
-    "ytdl-core": "0.20.4"
+    "request": "^2.81.0"
   }
 }
