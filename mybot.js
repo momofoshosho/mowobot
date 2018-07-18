@@ -19,14 +19,14 @@ client.on("message", (message) => {
   } else
     if (message.content.startsWith(prefix + "boop")) {
       const boopimgs = [
-        './sounds/boop1.gif',
-        './sounds/boop2.gif',
-        './sounds/boop3.gif',
-        './sounds/boop4.gif',
-        './sounds/boop5.gif',
-        './sounds/boop6.gif',
-        './sounds/boop7.gif',
-        './sounds/boop8.gif'
+        './images/boop1.gif',
+        './images/boop2.gif',
+        './images/boop3.gif',
+        './images/boop4.gif',
+        './images/boop5.gif',
+        './images/boop6.gif',
+        './images/boop7.gif',
+        './images/boop8.gif'
       ]
       var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
       var randboop = boopimgs[rand]
