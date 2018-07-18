@@ -13,8 +13,22 @@ client.on("message", (message) => {
     if (message.channel.type == "dm") return;
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     
-  if (message.content.startsWith(prefix + "boop")) {
-    message.channel.send("boop boop!");
+  if (message.content.startsWith(prefix + "ping")) {
+    message.channel.send("pong!");
+  } else
+    if (message.content.startsWith(prefix + "boop")) {
+      const rando_imgs = [
+        'https://imgur.com/gallery/UaNm6fv',
+        'https://imgur.com/gallery/AfT5VRL',
+        'https://imgur.com/gallery/3fntFrK',
+        'https://gph.is/19Ex5Vn',
+        'https://gph.is/1mZ8NOI',
+        'https://gph.is/1bdORiD',
+        'https://gph.is/2fBCZPZ',
+        'https://gph.is/2fBCZPZ',
+        'https://imgur.com/gallery/nDrxL85'
+      ]
+    message.channel.send("***Boop!***", {file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]});
   } else
     
   if (message.content.startsWith("lesbians")) {
@@ -52,12 +66,16 @@ client.on("message", (message) => {
                 {
                     name: "owo",
                     value: "*sees buldge*"
-                }
+                },
+                 {
+                   name: "boop",
+                   value: "*sending boop*"
+                 }
             ],
             timestamp: new Date(),
             footer: {
                 icon_url: client.user.avatarURL,
-                text: "© Mowobot"
+                text: "© Yui Senpai"
             }
         }
      });
