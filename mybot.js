@@ -39,7 +39,7 @@ client.on("message", (message) => {
     "name": "Boop!"
   }
 };
-channel.send({ embed });
+message.channel.send({ embed });
   } else
     
   if (message.content.startsWith("lesbians")) {
