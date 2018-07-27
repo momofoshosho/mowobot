@@ -6,8 +6,8 @@ const express = require("express");
 
 client.on("ready", () => {
   console.log("I am ready!");
-    client.user.setStatus("online");
-    client.user.setActivity('my guitar! chakakaka');
+    client.user.setStatus("busy");
+    client.user.setActivity("who's driving the car?");
 });
 
 prefix = "!";
@@ -45,6 +45,9 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "owo")) {
     message.channel.send("OwO What's This?");
   } else
+    if (message.content.startsWith(prefix + "prefix")) {
+      message.channel.reply("baka...it's ! .. but you already knew that :eyes:");
+    } else
     
     if (message.content.startsWith(prefix + "help")) {
         message.channel.send({embed: {
@@ -56,7 +59,7 @@ client.on("message", (message) => {
             description: "my default prefix is !",
             fields: [{
                 name: "prefix",
-                value: "Get my attention with something else :3"
+                value: "It's ! and ***only*** this !!!!!!!!"
               },
                 {
                 name: "ping",
