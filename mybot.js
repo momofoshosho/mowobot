@@ -6,7 +6,7 @@ const express = require("express");
 
 client.on("ready", () => {
   console.log("I am ready!");
-    client.user.setStatus("busy");
+    client.user.setStatus("online");
     client.user.setActivity("who's driving the car?");
 });
 
