@@ -46,7 +46,7 @@ client.on("message", (message) => {
     message.channel.send("OwO What's This?");
   } else
     if (message.content.startsWith(prefix + "prefix")) {
-      message.channel.reply("baka...it's ! .. but you already knew that :eyes:");
+      message.channel.send("baka...it's ! .. but you already knew that :eyes:");
     } else
     
     if (message.content.startsWith(prefix + "help")) {
