@@ -36,11 +36,7 @@ client.on("message", (message) => {
     
   if (message.content.includes("lesbian") && !message.author.bot) {
      message.channel.send(":eyes: oh?");
-   } else 
-   
-  if (message.content.includes("pika") && !message.author.bot) {
-    message.channel.send(":pikaGroove:");
-  } else 
+   } else
     
   if (message.content.includes("ant is a hoe") && !message.author.bot) {
     message.channel.send("you're damn right! >.<");
