@@ -34,7 +34,7 @@ client.on("message", (message) => {
       //message.channel.send({attachment});
   //} else
     
-  if (message.content.startsWith("lesbians")) {
+  if (message.content.contains("lesbian")) {
      message.channel.send("owo are we talking about lesbians? Mowogen and Ken *love* talking about lesbians!");
    } else 
     
