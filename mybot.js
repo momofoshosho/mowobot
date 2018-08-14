@@ -35,7 +35,7 @@ client.on("message", (message) => {
   //} else
     
   if (message.content.includes("lesbian") && !message.author.bot) {
-     message.channel.send("owo are we talking about lesbians? Mowogen and Ken *love* talking about lesbians!");
+     message.channel.send(":eyes: oh?");
    } else 
     
   if (message.content.startsWith("ant is a hoe")) {
