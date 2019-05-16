@@ -30,7 +30,7 @@ client.on("message", (message) => {
       ]
       if(message.mentions.members.size == 1) {
         let member = message.members.first()
-        message.channel.send('${message.author} just booped ${member}!',
+        message.channel.send('${message.author} just booped ${member}!', {
           file: boopimgs[Math.floor(Math.random() * boopimgs.length)]
         });
   } else
