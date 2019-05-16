@@ -33,6 +33,7 @@ client.on("message", (message) => {
         message.channel.send('${message.author} just booped ${member}!', {
           file: boopimgs[Math.floor(Math.random() * boopimgs.length)]
         });
+      }
   } else
     
   if (message.content.includes("lesbian") && !message.author.bot) {
