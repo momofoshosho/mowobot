@@ -7,7 +7,7 @@ const express = require("express");
 client.on("ready", () => {
   console.log("I am ready!");
     client.user.setStatus("online");
-    client.user.setActivity("who's driving the car?");
+    client.user.setActivity("mind games");
 });
 
 prefix = "!";
@@ -17,30 +17,27 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
   } else
-    //if (message.content.startsWith(prefix + "boop")) {
-     // const boopimgs = [
-     //  './images/boop1.gif',
-     //   './images/boop2.gif',
-     //   './images/boop3.gif',
-     //   './images/boop4.gif',
-     //   './images/boop5.gif',
-     //   './images/boop6.gif',
-     //   './images/boop7.gif',
-     //   './images/boop8.gif'
-     // ]
-      //var rand = boopimgs[Math.floor(Math.random() * boopimgs.length)];
-      //var randboop = boopimgs[rand]
-      //const attachment = new Discord.Attachment({randboop}, "Boop!");
-      //message.channel.send({attachment});
-  //} else
+    if (message.content.startsWith(prefix + "boop")) {
+      const boopimgs = [
+       './images/boop1.gif',
+        './images/boop2.gif',
+        './images/boop3.gif',
+        './images/boop4.gif',
+        './images/boop5.gif',
+        './images/boop6.gif',
+        './images/boop7.gif',
+        './images/boop8.gif'
+      ]
+      if(message.mentions.members.size == 1) {
+        let member = message.members.first()
+        message.channel.send('${message.author} just booped ${member}!',
+          file: boopimgs[Math.floor(Math.random() * boopimgs.length)]
+        });
+  } else
     
   if (message.content.includes("lesbian") && !message.author.bot) {
      message.channel.send(":eyes: oh?");
    } else
-    
-  if (message.content.includes("ant is a hoe") && !message.author.bot) {
-    message.channel.send("you're damn right! >.<");
-  } else
 
   if (message.content.startsWith(prefix + "owo")) {
     message.channel.send("OwO What's This?");
