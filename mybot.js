@@ -28,12 +28,9 @@ client.on("message", (message) => {
         './images/boop7.gif',
         './images/boop8.gif'
       ]
-      if(message.mentions.members.size == 1) {
-        let member = message.members.first()
-        message.channel.send('${message.author} just booped ${member}!', {
+        message.channel.send('*boop*!', {
           file: boopimgs[Math.floor(Math.random() * boopimgs.length)]
         });
-      }
   } else
     
   if (message.content.includes("lesbian") && !message.author.bot) {
