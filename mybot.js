@@ -45,7 +45,7 @@ client.on("message", (message) => {
     } else
     if (message.content.startsWith(prefix + "rate")) {
         let ratus = message.mentions.members.first();
-        if(!ratus) return message.channel.send("Baka! Who am I rating?? <:YuiO:563523680253247498>");
+        if(!ratus) return message.channel.send("Baka! Who am I rating?? <:YuiO:680305355754045446>");
         let rates = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
         let result = Math.floor((Math.random() * rates.length));
   
