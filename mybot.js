@@ -50,8 +50,8 @@ client.on("message", (message) => {
         let result = Math.floor((Math.random() * rates.length));
   
         if(ratus.user.id === message.author.id) {
-         return message.channel.send("**" + message.author.toString() + "** , I'd give you " + result + "/10 <:rindo:650889852245770250>");
-        } else return message.channel.send("I'd give **_" + ratus + "_** " +  result + "/10 <:rindo:650889852245770250>");
+         return message.channel.send("**" + message.author.toString() + "** , I'd give you " + result + "/10 <:charmander:650889851146731531>");
+        } else return message.channel.send("I'd give **_" + ratus + "_** " +  result + "/10 <:charmander:650889851146731531>");
       }
       else
     if (message.content.startsWith(prefix + "help")) {
