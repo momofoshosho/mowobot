@@ -45,13 +45,13 @@ client.on("message", (message) => {
     } else
     if (message.content.startsWith(prefix + "rate")) {
         let ratus = message.mentions.members.first();
-        if(!ratus) return message.channel.send("Baka! Who am I rating??");
-        var rates = ["1 .. ouch", "2", "3", "4", "5 hey you're just okay", "6", "7", "8", "9", "10 *wow oh wow* ;D"];
-        let result = Math.floor((Math.random() * String({rates})));
+        if(!ratus) return message.channel.send("Baka! Who am I rating?? <:YuiO:563523680253247498>");
+        let rates = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+        let result = Math.floor((Math.random() * rates.length));
   
         if(ratus.user.id === message.author.id) {
-         return message.channel.send("**" + message.author.toString() + "** , I'd give you " + result + "/10 :rindo:");
-        } else return message.channel.send("I'd give **_" + ratus + "_** " +  result + "/10 :rindo:");
+         return message.channel.send("**" + message.author.toString() + "** , I'd give you " + result + "/10 <:rindo:650889852245770250>");
+        } else return message.channel.send("I'd give **_" + ratus + "_** " +  result + "/10 <:rindo:650889852245770250>");
       }
       else
     if (message.content.startsWith(prefix + "help")) {
