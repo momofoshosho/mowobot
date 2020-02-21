@@ -47,7 +47,7 @@ client.on("message", (message) => {
         let ratus = message.mentions.members.first();
         if(!ratus) return message.channel.send("Baka! Who am I rating??");
         let rates = ["1 .. ouch", "2", "3", "4", "5 hey you're just okay", "6", "7", "8", "9", "10 *wow oh wow* ;D"];
-        let result = Math.floor((Math.random() * rates.length.toString()));
+        let result = Math.floor((Math.random() * rates.length)).toString();
   
         if(ratus.user.id === message.author.id) {
          return message.channel.send("**" + message.author.toString() + "** , I'd give you " + result + "/10 :rindo:");
